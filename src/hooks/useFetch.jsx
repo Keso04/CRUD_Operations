@@ -18,7 +18,7 @@ const useFetch = ({url, method}) => {
             if(!res.ok) throw new Error("Response failed")
             return res.json();
           }).then(data => setResponse(data))
-          .catch(err => setError(err))
+          .catch(err => setError(err.message))
           .finally(() => setLoading(false))
 
           return () => {
