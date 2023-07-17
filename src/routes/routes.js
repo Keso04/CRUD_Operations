@@ -12,7 +12,7 @@ const routes = [
         path: '/create'
     }, {
         element: <UpdatePage/>,
-        path: '/update:userId'
+        path: '/update/:taskId'
     }
 ]
 

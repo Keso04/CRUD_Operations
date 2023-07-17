@@ -14,10 +14,10 @@ const UpdatePage = () => {
         .catch(err => console.log(err))
     }
 
-    if (loading && !response) return <p>Loading...</p>
-    if (error || !response) return <p>Something went wrong{error}</p>
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Something went wrong{error.error}</p>
 
-    return <ToDo onFormSubmit={onSubmit} tasks={response.tasks}/>
+    return response && <ToDo onFormSubmit={onSubmit} tasks={response.tasks}/>
 }
 
 export default UpdatePage;
