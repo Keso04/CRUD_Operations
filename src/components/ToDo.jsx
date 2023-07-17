@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useRef } from "react";
 
-const ToDo = ({onFormSubmit}) => {
-    const [tasksToDo, setTasks] = useState();
+const ToDo = ({onFormSubmit, tasks}) => {
+    const taskRef = useRef();
 
     const onSubmit = (e) => {
         e.preventDefault();
-        onFormSubmit(tasksToDo);
+        onFormSubmit(taskRef.current.value);
     }
 
     return <form onSubmit={onSubmit}>
-        <input className="myinput" type="text" placeholder="Tasks to do" onChange={e => setTasks(e.target.value)}/>
+        <input className="myinput" type="text" placeholder="Tasks to do" ref={taskRef} defaultValue={tasks}/>
         <button className="mybtn">Submit</button>
     </form>
 }
