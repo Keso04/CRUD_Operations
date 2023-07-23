@@ -13,7 +13,7 @@ const LanguageContextProvider = ({children}) => {
     const contextValue = useMemo(() => {
         return {
             language: georgian ? 'georgian' : 'english',
-            toggleLanguage: () => setGeorgian((prev) => !prev)
+            toggleLanguage: () => setGeorgian((prev) => !prev) 
         }
     })
 

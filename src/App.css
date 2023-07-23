@@ -58,6 +58,7 @@
   padding: 16px 360px;
   margin-left: 90px;
   margin-right: 90px;
+  margin-top: 50px;
 }
 
 .mybtn3{
@@ -81,4 +82,20 @@
   margin-left: 635px;
   background: #aacbe0;
   font-weight: bold;
+}
+
+.mylink{
+	color: white;
+	padding: 4px 4px;
+  background-color: #0a1369;
+  overflow: hidden;
+  width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 200px;
+  font-size: 17px;
+  text-decoration: none;
+  display: inline-block;
+  width: 100px;
+  justify-content: center;
 }

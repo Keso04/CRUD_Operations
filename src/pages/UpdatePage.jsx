@@ -9,7 +9,7 @@ const UpdatePage = () => {
 
     const {sendRequest} = useRequest({url: `api/v1/tasks/${taskId}`, method: 'PUT'})
     const onSubmit = (tasks) => {
-        sendRequest({tasks})
+        sendRequest([...tasks])
         .then(() => Navigate('/'))
         .catch(err => console.log(err))
     }

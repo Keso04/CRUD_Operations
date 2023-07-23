@@ -9,7 +9,7 @@ const CreatePage = () => {
     const navigate = useNavigate();
 
     const onSubmit = (tasks) => {
-        sendRequest([{tasks}])
+        sendRequest([...tasks])
         .then(() => navigate('/'))
         .catch(err => console.log(err));
     }
